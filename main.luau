@@ -137,7 +137,7 @@ print(string.format("seed: 0x%08X%08X", state_hi, state_lo))
 print("----------------------------")
 
 local found = false
-for clockTime = 1000, 4000 do
+for clockTime = 0, 50000 do
 	-- seed ^= clock();
 	seed_from_number(bxor64(saved_state_hi, saved_state_lo, 0, u32(clockTime)))
 
